@@ -1,0 +1,60 @@
+---
+title: "Workshop Example"
+author: "Cristina Moya"
+format: html
+editor: visual
+execute:
+  message: false
+  warning: false
+  echo: false
+---
+
+```{=html}
+<!-- #Shortcuts
+Opt + Cmd + I opens a code chunk
+Shift + Cmd + Opt + P will run all the code above the cursor
+Shift + Cmd + M 
+Shift + Cmd + C  will comment out the r script chunk
+-->
+```
+```{r}
+#Packages
+library(tidyverse)
+library(palmerpenguins)
+library(gt)
+
+```
+
+## Introduction
+
+We are practicing Quarto. This is a **bold**, but others work *italicize*, (parentheses) "quotation" can work if you highlight word and wraps around
+
+splel check is working
+
+For git hub
+Stage = telling git to pay attention 
+Commit = I'm sure
+Push = push it up to the main branch
+
+
+## Data
+
+### Materials 
+
+We'll work with built in penguins dataset. Here's the dataset
+
+<!-- aroba tbl-penguin  will be a way to refer to table/figure with label -->
+
+```{r, echo=TRUE, eval=TRUE}
+  # if echo = FALSE then wont' render the code (can be a global option within the yaml)
+
+data(penguins)
+glimpse(penguins)
+
+# #| label: tbl-penguin
+# penguins %.%
+#   group_by(species) %>%
+#   summarize(length = mean(bill_length_mm)) %>%
+#   gt::gt()
+
+```
